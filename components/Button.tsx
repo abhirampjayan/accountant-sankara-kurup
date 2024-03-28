@@ -1,14 +1,36 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+import colors from 'utils/colors';
 
 type ButtonProps = {
   onPress: () => void;
   title: string;
+  variant?: 'primary' | 'secondary' | 'outlined' | 'default';
 };
 
-const Button: React.FC<ButtonProps> = ({ onPress, title }) => {
+const Button: React.FC<ButtonProps> = ({
+  onPress,
+  title,
+  variant = 'default',
+}) => {
+  const getButtonStyle = () => {
+    switch (variant) {
+      case 'primary':
+        return styles.primaryButton;
+      case 'secondary':
+        return styles.secondaryButton;
+      case 'outlined':
+        return styles.outlinedButton;
+      default:
+        return styles.defaultButton;
+    }
+  };
+
   return (
-    <TouchableOpacity style={styles.button} onPress={onPress}>
+    <TouchableOpacity
+      style={[styles.button, getButtonStyle()]}
+      onPress={onPress}
+    >
       <Text style={styles.buttonText}>{title}</Text>
     </TouchableOpacity>
   );
@@ -16,11 +38,23 @@ const Button: React.FC<ButtonProps> = ({ onPress, title }) => {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: 'blue',
     padding: 10,
     borderRadius: 5,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  defaultButton: {
+    backgroundColor: colors.primary,
+  },
+  primaryButton: {
+    backgroundColor: colors.primary,
+  },
+  secondaryButton: {
+    backgroundColor: colors.secondary,
+  },
+  outlinedButton: {
+    borderWidth: 1,
+    borderColor: colors.primary,
   },
   buttonText: {
     color: 'white',

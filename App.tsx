@@ -1,3 +1,4 @@
+import Button from 'components/Button';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import colors from 'utils/colors';
@@ -7,6 +8,10 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <View style={styles.container}>
         <Text style={styles.text}>Namaskaram, Sankara Kurup Here</Text>
+        <Button
+          onPress={() => console.log('Button pressed')}
+          title='Press me'
+        />
         <StatusBar style='auto' />
       </View>
     </SafeAreaView>
