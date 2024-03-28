@@ -11,6 +11,22 @@ export default function App() {
         <Button
           onPress={() => console.log('Button pressed')}
           title='Press me'
+          variant='primary'
+        />
+        <Button
+          onPress={() => console.log('Button pressed')}
+          title='Press me'
+          variant='secondary'
+        />
+        <Button
+          onPress={() => console.log('Button pressed')}
+          title='Press me'
+          variant='outlined'
+        />
+        <Button
+          onPress={() => console.log('Button pressed')}
+          title='Press me'
+          variant='default'
         />
         <StatusBar style='auto' />
       </View>

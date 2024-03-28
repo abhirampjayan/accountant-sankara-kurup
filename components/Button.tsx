@@ -1,14 +1,9 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 import colors from 'utils/colors';
+import { CustomButtonProps } from 'utils/types';
 
-type ButtonProps = {
-  onPress: () => void;
-  title: string;
-  variant?: 'primary' | 'secondary' | 'outlined' | 'default';
-};
-
-const Button: React.FC<ButtonProps> = ({
+const Button: React.FC<CustomButtonProps> = ({
   onPress,
   title,
   variant = 'default',
