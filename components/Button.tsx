@@ -7,6 +7,7 @@ const Button: React.FC<CustomButtonProps> = ({
   onPress,
   title,
   variant = 'default',
+  style,
 }) => {
   const getButtonStyle = () => {
     switch (variant) {
@@ -23,7 +24,7 @@ const Button: React.FC<CustomButtonProps> = ({
 
   return (
     <TouchableOpacity
-      style={[styles.button, getButtonStyle()]}
+      style={[styles.button, getButtonStyle(), style]}
       onPress={onPress}
     >
       <Text style={styles.buttonText}>{title}</Text>
@@ -33,8 +34,7 @@ const Button: React.FC<CustomButtonProps> = ({
 
 const styles = StyleSheet.create({
   button: {
-    padding: 10,
-    borderRadius: 5,
+    padding: 12,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -42,19 +42,20 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
   },
   primaryButton: {
-    backgroundColor: colors.primary,
+    backgroundColor: colors.primaryDark,
   },
   secondaryButton: {
-    backgroundColor: colors.secondary,
+    backgroundColor: colors.secondaryDark,
   },
   outlinedButton: {
     borderWidth: 1,
     borderColor: colors.primary,
   },
   buttonText: {
-    color: 'white',
-    fontSize: 16,
+    color: colors.paper,
+    fontSize: 20,
     fontWeight: 'bold',
+    fontFamily: 'Cormorant Garamond Medium',
   },
 });
 

@@ -13,7 +13,13 @@ export default function App() {
       <SafeAreaView style={styles.container}>
         <View style={styles.container}>
           <Text style={styles.text}>Take control of your finance</Text>
-
+          <Button
+            title='Sign In'
+            onPress={() => console.log('Button pressed')}
+            style={{ minWidth: 180 }}
+          />
+          <Text style={styles.linkText}>Create an acccount.</Text>
+          <Text style={styles.linkText}>Reset password.</Text>
           <StatusBar style='auto' />
         </View>
       </SafeAreaView>
@@ -24,19 +30,24 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.light,
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 24,
+    gap: 24,
   },
   text: {
-    color: colors.dark,
+    color: colors.primaryDark,
     fontSize: 36,
-    fontFamily: 'Cormorant Garamond Medium',
+    fontFamily: 'Cormorant Garamond SemiBold',
   },
   image: {
     width: '100%',
     aspectRatio: 3 / 4,
   },
-  header: {},
+  linkText: {
+    color: colors.secondaryDark,
+    fontSize: 16,
+    fontFamily: 'Cormorant Garamond Medium',
+  },
 });

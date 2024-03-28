@@ -1,8 +1,9 @@
 const colors = {
-  dark: '#3C3D42',
-  primary: '#9CCD62',
-  light: '#F6F8E2',
-  secondary: '#E0DDCA',
+  primaryDark: '#283618',
+  primary: '#606C38',
+  paper: '#FEFAE0',
+  secondary: '#DDA15E',
+  secondaryDark: '#BC6C25',
 };
- 
+
 export default colors;
