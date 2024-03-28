@@ -15,7 +15,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.AccountantSankaraKurup"
     },
     "android": {
       "adaptiveIcon": {
@@ -25,6 +26,25 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf",
+            "./assets/fonts/Cormorant_Garamond/CormorantGaramond-Bold.ttf",
+            "./assets/fonts/Cormorant_Garamond/CormorantGaramond-Italic.ttf",
+            "./assets/fonts/Cormorant_Garamond/CormorantGaramond-BoldItalic.ttf",
+            "./assets/fonts/Cormorant_Garamond/CormorantGaramond-Light.ttf",
+            "./assets/fonts/Cormorant_Garamond/CormorantGaramond-LightItalic.ttf",
+            "./assets/fonts/Cormorant_Garamond/CormorantGaramond-Medium.ttf",
+            "./assets/fonts/Cormorant_Garamond/CormorantGaramond-MediumItalic.ttf",
+            "./assets/fonts/Cormorant_Garamond/CormorantGaramond-SemiBold.ttf",
+            "./assets/fonts/Cormorant_Garamond/CormorantGaramond-SemiBoldItalic.ttf"
+          ]
+        }
+      ]
+    ]
   }
 }
