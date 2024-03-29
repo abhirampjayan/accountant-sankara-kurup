@@ -21,13 +21,10 @@ export default function App() {
         <View style={styles.container}>
           <Text style={styles.text}>Take control of your finance</Text>
           <Button
-            title='Sign In'
+            title="Let's get started"
             onPress={() => console.log('Button pressed')}
             style={{ minWidth: 180 }}
           />
-          <Link push href='/sign-up'>
-            <Text style={styles.linkText}>Create an acccount.</Text>
-          </Link>
           <StatusBar style='auto' />
         </View>
       </SafeAreaView>
