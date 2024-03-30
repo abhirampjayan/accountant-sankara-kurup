@@ -1,6 +1,6 @@
 import Button from 'components/Button';
 import { Image } from 'expo-image';
-import { Link, Stack, useRouter } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import colors from 'utils/colors';
