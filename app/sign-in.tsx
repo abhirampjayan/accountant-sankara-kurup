@@ -3,7 +3,7 @@ import XpButton from 'components/XpButton';
 import XpTextInput from 'components/XpTextInput';
 import { Image } from 'expo-image';
 import { Stack } from 'expo-router';
-import { SafeAreaView, StyleSheet, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import colors from 'utils/colors';
 
 type Props = {};
@@ -21,6 +21,7 @@ const SignInPage = (props: Props) => {
         }}
       />
       <SafeAreaView style={styles.container}>
+        <Text style={styles.text}>Sign In</Text>
         <View style={styles.inputContainer}>
           <XpTextInput
             placeholder='Email'
@@ -75,11 +76,12 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
     gap: 12,
   },
-  // text: {
-  //   color: colors.primaryDark,
-  //   fontSize: 36,
-  //   fontFamily: 'Cormorant Garamond SemiBold',
-  // },
+  text: {
+    color: colors.primaryDark,
+    fontSize: 36,
+    fontFamily: 'Cormorant Garamond Bold',
+    marginBottom: 24,
+  },
   image: {
     width: '100%',
     aspectRatio: 4 / 2,
