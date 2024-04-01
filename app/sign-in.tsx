@@ -1,17 +1,15 @@
-import Link from 'components/Link';
-import XpButton from 'components/XpButton';
-import XpTextInput from 'components/XpTextInput';
-import { Image } from 'expo-image';
-import { Stack } from 'expo-router';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
-import colors from 'utils/colors';
+import Link from "components/Link";
+import XpButton from "components/XpButton";
+import XpTextInput from "components/XpTextInput";
+import { Image } from "expo-image";
+import { Stack } from "expo-router";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import colors from "utils/colors";
 
-type Props = {};
-
-const SignInPage = (props: Props) => {
+const SignInPage = () => {
   return (
     <View style={styles.page}>
-      <Image source={require('../assets/heading.png')} style={styles.image} />
+      <Image source={require("../assets/heading.png")} style={styles.image} />
       <Stack.Screen
         options={{
           headerStyle: {
@@ -24,29 +22,29 @@ const SignInPage = (props: Props) => {
         <Text style={styles.text}>Sign In</Text>
         <View style={styles.inputContainer}>
           <XpTextInput
-            placeholder='Email'
-            keyboardType='email-address'
-            autoCapitalize='none'
+            placeholder="Email"
+            keyboardType="email-address"
+            autoCapitalize="none"
             onChangeText={(text) => {
               // handle email input change
             }}
           />
           <View style={styles.alignEnd}>
             <XpTextInput
-              placeholder='Password'
+              placeholder="Password"
               secureTextEntry
               onChangeText={(text) => {
                 // handle password input change
               }}
             />
-            <Link push href='/reset-password'>
+            <Link push href="/reset-password">
               Forgot password.
             </Link>
           </View>
           <XpButton onPress={() => null}>Sign In</XpButton>
         </View>
         <View>
-          <Link push href='/reset-password'>
+          <Link push href="/reset-password">
             Create an account.
           </Link>
         </View>
@@ -64,8 +62,8 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     padding: 24,
     gap: 24,
   },
@@ -73,17 +71,17 @@ const styles = StyleSheet.create({
     gap: 38,
   },
   alignEnd: {
-    alignItems: 'flex-end',
+    alignItems: "flex-end",
     gap: 12,
   },
   text: {
     color: colors.primaryDark,
     fontSize: 36,
-    fontFamily: 'Cormorant Garamond Bold',
+    fontFamily: "Cormorant Garamond Bold",
     marginBottom: 24,
   },
   image: {
-    width: '100%',
+    width: "100%",
     aspectRatio: 4 / 2,
   },
 });
