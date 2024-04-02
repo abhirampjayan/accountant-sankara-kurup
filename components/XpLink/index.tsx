@@ -6,7 +6,7 @@ import colors from 'utils/colors';
 // Prop si the props of ExpoLink component
 type Props = React.ComponentProps<typeof ExpoLink>;
 
-const Link = ({ children, ...props }: Props) => {
+const XpLink = ({ children, ...props }: Props) => {
   return (
     <ExpoLink {...props}>
       <Text style={styles.linkText}>{children}</Text>
@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Link;
+export default XpLink;

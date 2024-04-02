@@ -1,4 +1,4 @@
-import Link from 'components/Link';
+import Link from 'components/XpLink';
 import XpButton from 'components/XpButton';
 import XpTextInput from 'components/XpTextInput';
 import { Image } from 'expo-image';
